@@ -46,9 +46,9 @@ function checkTie(board) {
 }
 
 function playGame() {
-    let board = createBoard();
-    let currentPlayer = 'X';
-    let winner = null;
+    const board = createBoard();
+    const currentPlayer = 'X';
+    const winner = null;
 
     while (!winner && !checkTie(board)) {
         printBoard(board);
