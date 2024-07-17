@@ -63,14 +63,22 @@ new Promise(function(resolve, reject) {
         console.log(error);
         }
   }
-  consumeFivePromise()
-   async function getallusers(){
-    try { const response = await fetch('https://jsonplaceholder.typicode.com/users')
-      const data = response.json()
-      console.log(data);
+  // consumeFivePromise()
+  //  async function getallusers(){
+  //   try { const response = await fetch('https://jsonplaceholder.typicode.com/users')
+  //     const data = response.json()
+  //     console.log(data);
       
-    } catch (error) {
-      console.log("  Error ")
-    }
-   }
-   getallusers()
+  //   } catch (error) {
+  //     console.log("  Error ")
+  //   }
+  //  }
+  //  getallusers()
+  fetch('https://api.github.com/users/hiteshchaudary')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => console.log(error));
